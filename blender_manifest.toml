@@ -1,0 +1,26 @@
+schema_version = "1.0.0"
+
+id = "addon_dev_reloader"
+version = "1.1.0"
+name = "Addon Dev Reloader"
+tagline = "Hot-reload the add-on you are developing without a restart"
+maintainer = "dobesch"
+type = "add-on"
+
+website = "https://github.com/N4m-N4m/addon_dev_reloader"
+
+tags = ["Development"]
+
+blender_version_min = "4.2.0"
+
+license = ["SPDX:GPL-3.0-or-later"]
+
+[build]
+paths_exclude_pattern = [
+  "__pycache__/",
+  "/.git/",
+  "/.gitignore",
+  "/dist/",
+  "/docs/",
+  "*.zip",
+]
