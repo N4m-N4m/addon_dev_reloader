@@ -2,6 +2,13 @@
 
 Hot-reload the Blender add-on you're developing, without restarting Blender.
 
+![Addon Dev Reloader: the add-on picker open in Blender's top bar](docs/media/01_pick_from_top_bar.png)
+
+| | |
+|---|---|
+| ![Code edited on disk, hovering Reload shows which add-on it reloads](docs/media/02_edit_then_reload.png) | ![After one click the panel shows the new rows and the status bar confirms the reload](docs/media/03_reloaded.png) |
+| Edit, save, hover Reload | One click, new UI, no restart |
+
 Pick an add-on from the picker in the top bar (right of Scene / View Layer), edit its code, click **Reload**. The add-on is disabled, every one of its modules is dropped from Python's module cache, and it's enabled again, so the next import reads your changes from disk.
 
 ## Features
@@ -33,6 +40,10 @@ Hovering the reload button shows which add-on it will reload. If the add-on fail
 
 - Only enabled add-ons are listed; reloading a disabled one would just enable it.
 - Anything an add-on stores outside its own modules (handlers it forgot to remove in `unregister()`, data on `bpy.types` it never deletes) survives the reload. That's a bug in the reloaded add-on worth fixing anyway.
+
+## Listing on extensions.blender.org
+
+The description, captions and images used for the listing are in [docs/extensions-listing.md](docs/extensions-listing.md).
 
 ## Building from source
 
