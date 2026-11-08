@@ -12,6 +12,17 @@ Everything the upload form asks for, in the order it asks.
 | Website | https://github.com/N4m-N4m/addon_dev_reloader |
 | Report issues | https://github.com/N4m-N4m/addon_dev_reloader/issues |
 
+## Release notes (1.1.0)
+
+First release as a Blender extension. Requires Blender 4.2 or newer.
+
+- One-click reload of the add-on you're developing, from the top bar next to Scene and View Layer.
+- Click the picker and type to find the add-on among everything that's enabled.
+- The add-on's `unregister()` runs first, then it and all of its submodules are dropped from Python's module cache, so every file is read from disk again.
+- The status bar confirms each reload and says how many modules were reloaded. If the add-on fails to import, it shows the error instead.
+- The chosen add-on is remembered by module name, so enabling or disabling other add-ons doesn't change it.
+- Works with both extensions and legacy add-ons.
+
 ## Preview captions
 
 1. Pick the add-on you're working on from the top bar. Click the field and type to filter.
